@@ -6741,3 +6741,33 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 476ms (Views: 455.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/posts/new" for 67.189.250.128 at 2019-06-29 20:59:40 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 67.189.250.128 at 2019-06-29 20:59:45 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KJDfavvHqFyVBma83HCDQJttnkTCnvzPJWsQXgnFHubt2e5SKGGTQ603nSlds5vW6ESQ+wAwODD1uI+lNOh9IA==", "post"=>{"title"=>"sdfg", "description"=>"sdf"}, "commit"=>"Create Post"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sdfg"], ["description", "sdf"], ["created_at", "2019-06-29 20:59:45.963620"], ["updated_at", "2019-06-29 20:59:45.963620"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://142.93.113.210:58588/posts/15
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/15" for 67.189.250.128 at 2019-06-29 20:59:46 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 0.7ms)
+
+
